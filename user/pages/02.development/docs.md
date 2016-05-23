@@ -6,19 +6,12 @@ taxonomy:
 ---
 
 # Getting Started in Ubuntu - Development Environment
-- Install ` virtualenv` >= 13.1.2 and `virtualenvwrapper` (Restart session)
-- Install the following native packages
-  - `libtool`
-  - `autoconf`
-  - `bison`
-  - `swig`
-  - `libglib2.0-dev`
-  - `portaudio19-dev`
-  - `python-dev`
-  - `curl`
-  - `mpg123`
-  - `espeak`
-- run `dev_setup.sh` (feel free to read it, as well)
+
+- Install the native packages `sudo apt install virtualenv virtualenvwrapper libtool autoconf bison swig libglib2.0-dev portaudio19-dev python-dev curl mpg123 espeak libffi-dev libssl-dev git`
+
+- Grab the Mycroft Core source from [GitHub](https://github.com/MycroftAI/mycroft-core)
+
+- Run `dev_setup.sh` (feel free to read it, as well)
 
 # Getting set up using Docker
 - <i>WIP: More information coming soon.</i>
