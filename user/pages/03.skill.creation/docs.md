@@ -83,7 +83,7 @@ As an example of how to use this, take a look at the [weather skill](https://git
 ```
 This can be hard to parse, especially for people who have never seen regular expressions before. Regular expressions are essentially formatted pieces of text that can be used to match a wide range of phrases or strings. The chunks of text inside parentheses are called capturing groups, and are used to group similar things. For example, `(at|in)` is a group that will match either the word `at` or the word `in`. The block `(?P<Location>.*)` is more complicated. Like `(at|in)`, it is also a capturing group. However, the `?P<Location>` syntax is used to give a name to whatever it captures, which is very useful for our purposes. In this case, it gives it the name `Location`. The following two characters, `.*`, are what are used to define what this group captures. The dot character, `.` can be used in regex to represent any character except for newlines. The `*` special character is used to repeat something zero or more times. So together, `.*` matches zero or more characters of any kind. This means that the regex `(at|in) (?P<Location>.*)` will match something like `in London`, as well as `at the corner store`. In the first case, the `Location` is London, and in the second, the `Location` is `the corner store`. 
 
-Regular expressions are very powerful, and this has only mentioned a very narrow part of them. Look through a [regex tutorial](http://www.regular-expressions.info/repeat.html) if you want to learn more.
+Regular expressions are very powerful and also quite complicated, and this has only explained a small part of them. Look through a [regex tutorial](http://www.regular-expressions.info/repeat.html) if you want to learn more.
 
 ### `Test`
 The `test` folder contains a subfolder for intent, inside of which are `.intent.json` files. These are used to test whether your code properly creates intents.
@@ -149,7 +149,7 @@ def __init__(self):
 ```
 
 #### initialize
-This is where you should load all of the files in the directory and build each intent you want to create.
+This is where you should load all of the files in the directory and build each intent you want to create. Note that if you want to use regex in your skill, you must also call the inherited method `self.load_regex_files(path)`
 For the Hello World skill, this looks like
 ```python
 def initialize(self):
@@ -160,7 +160,7 @@ def initialize(self):
     self.register_intent(thank_you_intent, self.handle_thank_you_intent)
     ...
 ```
-This creates an intent named thank_you_intent that requires a ThankYouKeyword, which is one of the phrases in the ThankYouKeyword.voc files.
+This creates an intent named thank_you_intent that requires a ThankYouKeyword, which is one of the phrases in the ThankYouKeyword.voc files. You can also require defined regex entities, such as `Location` in the regex example.
 It then registers that the function handle_thank_you_intent is what should be called if the ThankYouKeyword is found.
 All of the other intents are registered in the same way.
 
