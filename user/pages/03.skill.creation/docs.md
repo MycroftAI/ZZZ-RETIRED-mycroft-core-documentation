@@ -52,7 +52,7 @@ There are generally seperate .dialog files for each intent defined in the skill.
 ### Vocab
 The `vocab` folder contains subfolders for each language supported, like `en-us`. Inside each language folder, we place `.voc` files which contain phrases or keywords that determine what Mycroft will listen for to trigger the skill.
 ```
--dialog
+-vocab
 --en-us
 ---my.file.voc.
 --pt-br
