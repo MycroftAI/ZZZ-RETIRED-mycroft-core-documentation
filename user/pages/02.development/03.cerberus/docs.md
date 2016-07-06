@@ -1,10 +1,9 @@
 ---
-title: 'Cerberus'
+title: 'Cerberus Device and Account Manager'
 taxonomy:
     category:
         - docs
 ---
-## Cerberus Device and Account Manager
 Mycroft AI, Inc. - the company behind Mycroft maintains the Cerberus device and account management system. Developers can sign up at https://cerberus.mycroft.ai
 
 By default the Mycroft software is configured to use Cerberus, upon any request such as "Hey Mycroft, what is the weather?", you will be informed that you need to pair and Mycroft will speak a 6-digit code, which you enter into the pairing page on the [Cerberus site](https://cerberus.mycroft.ai).
