@@ -4,7 +4,6 @@ taxonomy:
     category:
         - docs
 ---
-# Running Mycroft
 ## With `mycroft.sh`
 Mycroft has a shell script `mycroft.sh` that can be used to run the voice, command line interface, service, and skills processes all at once using screens. To start, just run `./mycroft.sh start` and to kill all processes, run `./mycroft.sh stop`. You can also use `./mycroft.sh start -c` to run just service, skills, and command line or `./mycroft.sh start -v` to run just service, skill, and voice. To see all of the currently running screens, use `screen -list`. To attach one of the screens to see the output, use `screen -r <screen-name>`. For more information about screens, take a look at the [screen manual](https://www.gnu.org/software/screen/manual/screen.html).
 
