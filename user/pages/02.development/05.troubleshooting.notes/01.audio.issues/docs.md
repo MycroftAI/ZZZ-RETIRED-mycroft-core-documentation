@@ -1,10 +1,9 @@
 ---
-title: 'Audio issues'
+title: 'Audio errors and issues'
 taxonomy:
     category:
         - docs
 ---
-# Audio errors and issues
 If your questions and issues aren't addressed here please reach out to us via the support channels.
 
 ## Alsa
