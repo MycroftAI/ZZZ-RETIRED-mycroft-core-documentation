@@ -4,9 +4,6 @@ taxonomy:
     category:
         - docs
 ---
-
-# Creating a skill
-
 ## Setting up the folders
 
 Once you've come up with your idea for a skill, make a new folder in `mycroft-core/mycroft/skills` with the desired skill name. Please note that this folder name should be lower-case, and do not use the names of frequently used python modules such as `time` to avoid conflicts.
