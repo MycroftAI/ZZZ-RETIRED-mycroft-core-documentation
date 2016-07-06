@@ -1,10 +1,9 @@
 ---
-title: Skills Framework
+title: Mycroft Skills Framework
 taxonomy:
     category:
         - docs
 ---
-# Mycroft Skills Framework
 The Mycroft Skills Framework is intended to allow you to develop skills by attaching your local developer code to a running Mycroft device (or MessageBus Service). By default, it will assume that you have a messagebus service running locally on port 8000, and you would drive your skill with a cli or speech client attached to the same message bus.
 
 This doc assumes you're working in an isolated virtualenv for your skill. You can also choose to install the sdk into your global python install with sudo.
