@@ -5,14 +5,17 @@ taxonomy:
         - docs
 ---
 # Running Mycroft
+## With `mycroft.sh`
+Mycroft has a shell script `mycroft.sh` that can be used to run the voice, command line interface, service, and skills processes all at once using screens. To start, just run `./mycroft.sh start` and to kill all processes, run `./mycroft.sh stop`. You can also use `./mycroft.sh start -c` to run just service, skills, and command line or `./mycroft.sh start -v` to run just service, skill, and voice. To see all of the currently running screens, use `screen -list`. To attach one of the screens to see the output, use `screen -r <screen-name>`. For more information about screens, take a look at the [screen manual](https://www.gnu.org/software/screen/manual/screen.html).
+
 ## With `start.sh`
-Mycroft provides `start.sh` to run a large number of common tasks. This script uses the virtualenv created by
+Mycroft also provides the shell script `start.sh` to run a large number of common tasks. This script uses the virtualenv created by
 `dev_setup.sh`. The usage statement lists all run targets, but to run a Mycroft stack out of a git checkout, the following processes should be started:
 run `./start.sh service`
 run `./start.sh skills`
 run `./start.sh voice`
 
-*Note: The above scripts are blocking, so each will need to be run in a separate terminal session.*
+*Note: The above scripts are blocking, so amke sure to run each of them in a separate terminal session.*
 
 ## Without `start.sh`
 
