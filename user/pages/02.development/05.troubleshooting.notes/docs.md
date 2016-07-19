@@ -1,11 +1,9 @@
 ---
-title: 'Troubleshooting'
+title: 'FAQ and Common Errors'
 taxonomy:
     category:
         - docs
 ---
-# FAQ/Common Errors
-
 ## FAQ
 
 ### How do I change what Mycroft responds to?
