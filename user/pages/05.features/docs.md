@@ -7,8 +7,7 @@ taxonomy:
 
 ## Skills
 
-Here are the skills that the [Mycroft core](https://github.com/MycroftAI/mycroft-core) has as of 14 July 2016.
-
+Here are the skills that the [Mycroft core](https://github.com/MycroftAI/mycroft-core) has as of 14 July 2016. The example keyphrases are just examples, take a look at the vocab folders in the provided links for a more comprehensive list of what Mycroft will respond to.
 
 | Skill Name        | Example Keyphrase           | Function  | Output | Links |
 | ------------- | ------------- | -----            | ------ | ------------ |
