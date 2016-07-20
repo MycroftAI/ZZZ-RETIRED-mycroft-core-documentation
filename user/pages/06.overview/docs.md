@@ -22,7 +22,17 @@ The messagebus is also hosted as a websocket that other things can communicate w
 
 ## Speech Client
 
-tbd
+There are a few components to the speech client. There is the `AudioConsumer`, `AudioProducer`, and within that the `listener`. There exists a shared queue of audio files between the consumer and producer. The producer grabs segments of audio from the listener and the consumer uses the audio to send to an external STT engine and emit the result as an `Utterance`.
+
+### Listener
+
+The listener figures out what peices of audio Mycroft should record and respond to. It first detects its wake word using pocketsphinx on around the last two seconds of audio. Audio older than two seconds is discarded. After detecting its wakeword it begins recording until when it thinks the user has finished speaking. This is estimated using a heuristic described below.
+
+#### Phrase Heuristic
+
+Essentially, the listener records until the "noise level" falls at or beneath `0`. The "noise level" is a sort of estimate of the relative noise in the past few seconds. Every time the noise is above a certain threshold, the "noise level" increases. On the contrary, the opposite happens when lower than the threshold. By keeping track of this number, small separated noises will not affect the noise level as much as long contiguous noises most likely indicative of voice.
+
+Another technique the listener uses is waiting for audio when it knows there should more. If you say the wake word without any following noise Mycroft will wait for input for another 3 to 4 seconds. The sum of audio that is above the threshold is maintained while recording a phrase. The audio will only return when both the noise level is at 0 and the length of audio above the threshold is past a minimum amount (however, after 30 seconds the listener will timeout and return anyways).
 
 ## Skills
 
