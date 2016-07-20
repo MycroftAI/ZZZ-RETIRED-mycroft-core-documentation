@@ -51,6 +51,6 @@ A skill consists of `vocabulary` files (a list of phrases or words that Mycroft 
 
 ### Adapt
 
-In short, Adapt takes in a sentence and attempts to find what the intent of it is by looking for matching words and phrases from intents and vocab registered by different skills. Adapt is described in more detail in [its documentation](https://adapt.mycroft.ai/)
+In short, Adapt takes in a sentence and attempts to find what the intent of it is by looking for matching words and phrases from intents and vocab registered by different skills. Adapt is described in more detail in [its documentation](https://adapt.mycroft.ai/).
 
  
