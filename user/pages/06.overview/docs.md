@@ -5,7 +5,7 @@ taxonomy:
     - docs
 ---
 
-As talked about in the [getting started section](), Mycroft Core contains four main services - the messagebus, the skills service, the speech client, and the command line interface. Only one of the command line client and speech client need to be run, as they both provide methods of interacting with Mycroft. This section will cover what these services actually do on a general level.
+Mycroft Core contains four main services - the messagebus, the skills service, the speech client, and the command line interface. Only one of the command line client and speech client need to be run, as they both provide methods of interacting with Mycroft. This section will cover what these services actually do on a general level.
 
 ## Overview
 
