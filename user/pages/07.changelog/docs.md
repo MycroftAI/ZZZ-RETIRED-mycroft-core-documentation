@@ -7,6 +7,23 @@ taxonomy:
 [github-releases]:https://github.com/MycroftAI/mycroft-core/releases
 [View the releases on GitHub here.][github-releases]
 
+# v0.7.11
+
+This is a patch release to fix an issue that was preventing avrdude from uploading Arduino code to the Mycroft unit.
+
+# v0.7.10
+
+This release includes some less visible changes and fixes. These changes and others coming soon will allow us to better iterate the development of mycroft-core, integrate multiple build systems, and decouple skills from the process.
+
+### Volume changes
+If you have a Mycroft unit, the volume behavior has changed. Delay has been decreased and instead of speaking the volume level setting at each click, a simple sound has been added. This reduces the chance of turning the dial several notches and then waiting for Mycroft to stop speaking. He will still speak if you set the volume with voice control.
+
+### Enclosure improvements
+The enclosure code is in the process of some heavy refactoring, but some quick fixes were added to make it more responsive and tweak the weather animation.
+
+### Tweaks
+We have also separated packaging scripts from this repository, so they are no longer tied to a release. This also reduces some clutter and opens the possibility to download daily master builds via apt. Check back for an update at http://docs.mycroft.ai.
+
 # v0.7.8
 
 ### Base media skill
