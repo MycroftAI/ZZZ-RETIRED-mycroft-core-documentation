@@ -5,7 +5,7 @@ taxonomy:
     - docs
 ---
 
-This is a more in-depth look at the messagebus, intended for use by developers or anyone else who wants to understand how it works..
+This is a more in-depth look at the messagebus, intended for use by developers or anyone else who wants to understand how it works.
 
 ## Implementation
 The messagebus relies on a Python library called [pyee](https://github.com/jfhbrook/pyee). This adds a new `EventEmitter` class that you can import. The functionality of this class is fairly simple, and consists of two main functions. From the pyee documentation:
@@ -37,19 +37,20 @@ You can emit whatever you want across the messagebus. Note, however, that there 
 
 | Message Type        | Sent from           | Purpose | Contents |  Example Metadata |
 | ------------- | ------------- | -----            | ------------ | ---------- |
-| detach_intent      | The `detach` function of MycroftSkill  | Detaches the intent specified  | |`{'intent_name': 'HelloWorldIntent'}` |
-| <some_intent_name>      | The intent skill after determining the intent of an utterance. | |Calls the handler for that intent. Note that the metadata needed depends on the skill.  | |`{"HelloWorldKeyword": "hello world", "intent_type": "HelloWorldIntent", "utterance": "hello world", "confidence": 1.0, "target": null}` |
-| message      |  The messagebus client after receiving a message | Logs the json dumps of the message in the terminal  | | A Message object  |
-| mycroft.media.stop      | Any skill that inherits from the media base class | Stop anything playing on a media skill |  | `{'origin': 'MediaSkill'}` |
-  | mycroft.paired      | The pairing skill  | Used to give updates on pairing process | |`{'paired': True}` |
-| mycroft.stop      | The stop skill | Calls the `stop` function of any skill currently running. |  |N/A |
-| recognizer_loop:audio_output_start      | The speech service | Show when Mycroft starts talking |  | N/A |
-| recognizer_loop:audio_output_end      | The speech service | Show when Mycroft stops talking |  | N/A |
-| recognizer_loop:record_begin      | The listener after the wake word is detected | Show when Mycroft starts recording |  | N/A |
-| recognizer_loop:record_end      | The listener after finishing recording | Show when Mycroft stops recording |  | N/A |
-| recognizer_loop:sleep      | The sleep skill  | Causes the listener to not send audio until `Hey Mycroft, wake up` is heard |  | N/A |
-| recognizer_loop:utterance      | The listener, once the STT transcribing has come back | Parsed to determine intent |  | `{'utterances': 'Hello world','session': 'some_unique_id'}` |
-| recognizer_loop:wakeword      | The recognizer loop  | |   | |
-| register_intent      |  |  | | | 
-| register_vocab      |  |  | | | 
-| speak      |  |  | | | 
+| detach_intent      | The `detach` function of MycroftSkill  | Detaches the intent specified  | The name of the intent to be detached |`{'intent_name': 'HelloWorldIntent'}` |
+| any intent      | The intent skill after determining the intent of an utterance. | Calls the handler for that intent. Note that the metadata needed depends on the skill.  | The name of the intent and the needed metadata |`{"HelloWorldKeyword": "hello world", "intent_type": "HelloWorldIntent", "utterance": "hello world", "confidence": 1.0, "target": null}` |
+| intent_failure | The intent skill after failing to determine the intent of an utterance | Sends the utterance to the Wolfram Alpha skill | The utterance | `{"utterance": 'hello world'}` | 
+| message      |  The messagebus client after receiving a message | Logs the json dumps of the message in the terminal  | A Message object | A Message object  |
+| mycroft.media.stop      | Any skill that inherits from the media base class | Stop anything playing on a media skill | The skill where the message originated  | `{'origin': 'MediaSkill'}` |
+| mycroft.paired      | The pairing skill  | Used to give updates on pairing process | Whether the device is paired or not |`{'paired': True}` |
+| mycroft.stop      | The stop skill | Calls the `stop` function of any skill currently running. |N/A  | N/A |
+| recognizer_loop:audio_output_start      | The speech service | Show when Mycroft starts talking |N/A  | N/A |
+| recognizer_loop:audio_output_end      | The speech service | Show when Mycroft stops talking |N/A  | N/A |
+| recognizer_loop:record_begin      | The listener after the wake word is detected | Show when Mycroft starts recording |  | N/A |N/A |
+| recognizer_loop:record_end      | The listener after finishing recording | Show when Mycroft stops recording |N/A  | N/A |
+| recognizer_loop:sleep      | The sleep skill  | Causes the listener to not send audio until `Hey Mycroft, wake up` is heard | N/A | N/A |
+| recognizer_loop:utterance      | The listener, once the STT has transcribed the audio | Parsed to determine intent | The words that were recognized  | `{'utterances': 'Hello world','session': 'some_unique_id'}` |
+| recognizer_loop:wakeword      | The recognizer loop  | Show when the wakeward was detected | What the wakeword is  | `{'utterance': 'Hey Mycroft', 'session': 'some_unique_id'}` |
+| register_intent      | Each skill that registers an intent | Registers the intent with the intent skill  | The intent and any other needed information | `{"at_least_one": [], "requires": [["HelloWorldKeyword", "HelloWorldKeyword"]], "optional": [], "name": "HelloWorldIntent"}` | 
+| register_vocab      | Each skill that registers vocab | Registers the vocab with the intent skill | The vocab phrase and what type of keyword it is | `{"start": "hello world", "end": "HelloWorldKeyword"}` | 
+| speak      | Any skill that needs to say something, as well as the listener | Speaks the utterance | The phrase to speak | {"utterance": "Hello"} | 
