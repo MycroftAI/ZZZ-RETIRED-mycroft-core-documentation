@@ -64,6 +64,8 @@ The following packages are required for setting up the development environment,
  - `portaudio`
  - `portaudio-devel`
  - `mpg123` (Available in RPMFusion)
+ 
+After installing the necessary packages, make sure to run the `dev_setup.sh` script that is provided in the `mycroft-core` folder. 
 
 # Installing using apt (experimental)
 It is currently possible to install mycroft-core on any Debian based system (amd64 and armhf.) For developers, it is recommended to use the git checkout method. It is also possible to attach an interface to the Mycroft messagebus or use the Skills SDK to develop outside of the core. In this case installing with apt may be useful to you.
