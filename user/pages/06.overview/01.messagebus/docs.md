@@ -35,15 +35,21 @@ You can emit whatever you want across the messagebus. Note, however, that there 
 
 ## Message types
 
-| Message Type        | Linked Functionality           | Example Metadata  |  Links |
-| ------------- | ------------- | -----            | ------------ |
-| detach_intent      | Detaches the intent specified | `{'intent_name': 'HelloWorldIntent'}`  | |
-| <some_intent_name>      | Calls the handler of the intent named. Note that the metadata is sometimes not needed. | `{"HelloWorldKeyword": "hello world", "intent_type": "HelloWorldIntent", "utterance": "hello world", "confidence": 1.0, "target": null}` | |
-| message      | Logs the json dumps of the message in the terminal  | A Message object  |  |
-| mycroft.media.stop      | Tells any skills that inherit from the media base class to stop playing  | `{'origin': 'MediaSkill'}`  | |
-| mycroft.paired      | Used to give updates on pairing process | `{'paired': True}`| |
-| mycroft.stop      | Calls the `stop` function of any skill currently running. | N/A | |
-| recognizer_loop:audio_output_start      |  |  | |
-| recognizer_loop:audio_output_end      |  |  | |
-| recognizer_loop:audio_output_start      |  |  | |
-| recognizer_loop:audio_output_start      |  |  | |
+| Message Type        | Sent from           | Purpose | Contents |  Example Metadata |
+| ------------- | ------------- | -----            | ------------ | ---------- |
+| detach_intent      | The `detach` function of MycroftSkill  | Detaches the intent specified  | |`{'intent_name': 'HelloWorldIntent'}` |
+| <some_intent_name>      | The intent skill after determining the intent of an utterance. | |Calls the handler for that intent. Note that the metadata needed depends on the skill.  | |`{"HelloWorldKeyword": "hello world", "intent_type": "HelloWorldIntent", "utterance": "hello world", "confidence": 1.0, "target": null}` |
+| message      |  The messagebus client after receiving a message | Logs the json dumps of the message in the terminal  | | A Message object  |
+| mycroft.media.stop      | Any skill that inherits from the media base class | Stop anything playing on a media skill |  | `{'origin': 'MediaSkill'}` |
+  | mycroft.paired      | The pairing skill  | Used to give updates on pairing process | |`{'paired': True}` |
+| mycroft.stop      | The stop skill | Calls the `stop` function of any skill currently running. |  |N/A |
+| recognizer_loop:audio_output_start      | The speech service | Show when Mycroft starts talking |  | N/A |
+| recognizer_loop:audio_output_end      | The speech service | Show when Mycroft stops talking |  | N/A |
+| recognizer_loop:record_begin      | The listener after the wake word is detected | Show when Mycroft starts recording |  | N/A |
+| recognizer_loop:record_end      | The listener after finishing recording | Show when Mycroft stops recording |  | N/A |
+| recognizer_loop:sleep      | The sleep skill  | Causes the listener to not send audio until `Hey Mycroft, wake up` is heard |  | N/A |
+| recognizer_loop:utterance      | The listener, once the STT transcribing has come back | Parsed to determine intent |  | `{'utterances': 'Hello world','session': 'some_unique_id'}` |
+| recognizer_loop:wakeword      | The recognizer loop  | |   | |
+| register_intent      |  |  | | | 
+| register_vocab      |  |  | | | 
+| speak      |  |  | | | 
