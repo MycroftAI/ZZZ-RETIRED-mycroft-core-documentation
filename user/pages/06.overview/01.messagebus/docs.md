@@ -46,11 +46,11 @@ You can emit whatever you want across the messagebus. Note, however, that there 
 | mycroft.stop      | The stop skill | Calls the `stop` function of any skill currently running. |N/A  | N/A |
 | recognizer_loop:audio_output_start      | The speech service | Show when Mycroft starts talking |N/A  | N/A |
 | recognizer_loop:audio_output_end      | The speech service | Show when Mycroft stops talking |N/A  | N/A |
-| recognizer_loop:record_begin      | The listener after the wake word is detected | Show when Mycroft starts recording |  | N/A |N/A |
+| recognizer_loop:record_begin      | The listener after the wake word is detected | Show when Mycroft starts recording | N/A |N/A |
 | recognizer_loop:record_end      | The listener after finishing recording | Show when Mycroft stops recording |N/A  | N/A |
 | recognizer_loop:sleep      | The sleep skill  | Causes the listener to not send audio until `Hey Mycroft, wake up` is heard | N/A | N/A |
 | recognizer_loop:utterance      | The listener, once the STT has transcribed the audio | Parsed to determine intent | The words that were recognized  | `{'utterances': 'Hello world','session': 'some_unique_id'}` |
 | recognizer_loop:wakeword      | The recognizer loop  | Show when the wakeward was detected | What the wakeword is  | `{'utterance': 'Hey Mycroft', 'session': 'some_unique_id'}` |
 | register_intent      | Each skill that registers an intent | Registers the intent with the intent skill  | The intent and any other needed information | `{"at_least_one": [], "requires": [["HelloWorldKeyword", "HelloWorldKeyword"]], "optional": [], "name": "HelloWorldIntent"}` | 
 | register_vocab      | Each skill that registers vocab | Registers the vocab with the intent skill | The vocab phrase and what type of keyword it is | `{"start": "hello world", "end": "HelloWorldKeyword"}` | 
-| speak      | Any skill that needs to say something, as well as the listener | Speaks the utterance | The phrase to speak | {"utterance": "Hello"} | 
+| speak      | Any skill that needs to say something, as well as the listener | Speaks the utterance | The phrase to speak | `{"utterance": "Hello"}` | 
