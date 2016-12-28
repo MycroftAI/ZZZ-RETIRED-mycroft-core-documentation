@@ -25,7 +25,7 @@ The command line client essentially shortcuts directly to sending the text to Ad
 The messagebus is how all of the different parts of Mycroft communicate between each other. It does this by sending different types of messages that contain needed information. For example, one part of Mycroft could send a `speak` message that contains something for Mycroft to say. The message would be carried over the messagebus, and any other service connected to it could read the message and parse it. In the core, the speech or command line client would pick up the messsage and then convert it into speech. 
 
 The messagebus is also hosted as a websocket that other things can communicate with. By default, this websocket is set on 
-`localhost:8000/events/ws`.
+`localhost:8181/core
 
 ## Speech Client
 

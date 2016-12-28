@@ -8,13 +8,18 @@ taxonomy:
 
 ### How do I change what Mycroft responds to?
 
-To begin, open up your config file or create one in the appropriate user directory (`~/.mycroft/mycroft.ini` is suggested). In there add a new block of config shown below, provided that it doesn't already exist:
+To begin, open up your config file or create one in the appropriate user directory (`~/.mycroft/mycroft.conf` is suggested). In there add a new block of config shown below, provided that it doesn't already exist:
 
-```ini
-[listener]
-wake_word = "hey mycroft"
-phonemes = "HH EY . M AY K R AO F T"
-threshold = "1e-90"
+```json
+ "listener": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "wake_word": "hey mycroft",
+    "phonemes": "HH EY . M AY K R AO F T",
+    "threshold": 1e-90,
+    "multiplier": 1.0,
+    "energy_ratio": 1.5
+  }
 ```
 
 As you may guess, you can replace the "hey mycroft" above with whatever wake word you would like. Along with that you must change the "phonemes" (aka the pronunciation) to this new wake word. To do this you can search for your word or similar ones using [this cmu sphinx English dictionary][cmudict]. If there is a space in the phrase place a period between the words in the phonemes, as demonstrated above.

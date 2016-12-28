@@ -121,7 +121,7 @@ Log files will also be created.
  - `/var/log/mycroft-speech-client`
 
 
-In addition, a default configuration file will be created in `/etc/mycroft.ini`.
+In addition, a default configuration file will be created in `/etc/mycroft.conf`.
 
 Even though Mycroft services will be controlled by the system, they will be run as the `mycroft` user. Additional configuration as well as the location of the identity.json file will be created in `/home/mycroft/.mycroft/`.
 
