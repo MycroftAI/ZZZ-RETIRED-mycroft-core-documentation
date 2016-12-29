@@ -9,22 +9,21 @@ taxonomy:
 
 # v0.8.0
 ### New API and web service integration
-- Connenction to the new account management back-end. We have moved to [home.mycroft.ai](https://home.mycroft.ai) from [cerberus.mycroft.ai](https://cerberus.mycroft.ai). Older code is incompatible with the new API so we will continue to maintain cerberus for some time. Not sure where to pair? Let Mycroft tell you the correct website.
+- Connenction to the new account management back-end. We have moved to [home.mycroft.ai](https://home.mycroft.ai) from [cerberus.mycroft.ai](https://cerberus.mycroft.ai). Older code is incompatible with the new API so we will continue to maintain Cerberus for some time. Not sure where to pair? Let Mycroft tell you the correct website.
 - Many more configuration options, including support for multiple social media login types as well as stand-alone accounts.
 - Change TTS engine, wake-word, units, time and date format, and more settings from the web interface.
 - We lost support for loading location and timezone configuration from the web but this is coming again soon. These settings can still be found in the mycroft.conf file; [Take a look here.](https://github.com/MycroftAI/mycroft-core/blob/master/mycroft/configuration/mycroft.conf#L3)
 
 ### Core enhancements
-- Major configuration format refactor. The mycroft.ini file has now been replaced by a json implementation in mycroft.conf. This should allow for simpler usage and should be much more powerfull.
-- The identity.json has been renamed to identity2.json, to avoid conflicts with the cerberus account management system.
-- Configuration loading changes: The responsibility for loading configuration from home.mycroft.ai has been moved to a skill. It will periodically poll for changes and no longer requires a complete restart.
-- Wolfram Alpha and Open Weather Map now have a isolated API layer, we need not package those libs anymore.
+- Major configuration format refactor. The flat mycroft.ini file has now been replaced by a json implementation in mycroft.conf. This should allow for simpler usage and will be much more powerful.
+- The identity.json has been renamed to identity2.json, to avoid conflicts with the Cerberus account management system.
+- Configuration loading changes: home.mycroft.ai will periodically be polled poll for changes and no longer requires a complete restart for settings changes to take effect.
+- Wolfram Alpha and Open Weather Map now have a isolated API layer, we need not package those libs.
 - The listening process has been refined, removing unnecessary threads for better performance.
-- Our message bus websocket port and path have changed to avoid conflicts. Mycroft now listens on port 8181 with the route '/core'
+- The message bus websocket port and path have changed to avoid conflicts. Mycroft now listens on port 8181 with the route '/core'
 
 ### Mycroft Mark 1 unit enhancements
-- Our unit specific enclosure client(for updating Arduino sketches) and packaging method have been modified for platform detection either by configuration file or from serial port communication. This will allow for better compatibility for other systems, such as standalone Raspberry Pi's.
-
+- Our unit specific enclosure client (for updating Arduino sketches) and packaging method have been modified for platform detection either by configuration file or from serial port communication. This will allow for better compatibility for other systems, such as standalone Raspberry Pi's.
 
 # v0.7.20
 ### Wifi Setup Client (for Mycroft unit)
