@@ -87,8 +87,9 @@ Download and install signing key from keyserver.
 
 Create apt source entry (stable releases).
  - `sudo bash -c 'echo "deb http://repo.mycroft.ai/repos/apt/debian debian main" > /etc/apt/sources.list.d/repo.mycroft.ai.list'`
+ 
+    **or** for the daily master builds (unstable, more frequent)
 
-Alternativly, create apt source entry (unstable, daily master builds or more frequent).
  - `sudo bash -c 'echo "deb http://repo.mycroft.ai/repos/apt/debian debian-unstable main" > /etc/apt/sources.list.d/repo.mycroft.ai.list'`
 
 Updating the apt cache to include the new repository
