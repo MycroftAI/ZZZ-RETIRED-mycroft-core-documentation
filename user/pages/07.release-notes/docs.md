@@ -16,6 +16,7 @@ taxonomy:
 
 ### Core enhancements
 - Major configuration format refactor. The mycroft.ini file has now been replaced by a json implementation in mycroft.conf. This should allow for simpler usage and should be much more powerfull.
+- The identity.json has been renamed to identity2.json, to avoid conflicts with the cerberus account management system.
 - Configuration loading changes: The responsibility for loading configuration from home.mycroft.ai has been moved to a skill. It will periodically poll for changes and no longer requires a complete restart.
 - Wolfram Alpha and Open Weather Map now have a isolated API layer, we need not package those libs anymore.
 - The listening process has been refined, removing unnecessary threads for better performance.
