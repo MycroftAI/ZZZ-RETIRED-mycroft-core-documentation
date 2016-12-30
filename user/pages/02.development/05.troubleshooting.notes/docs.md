@@ -8,7 +8,7 @@ taxonomy:
 
 ### How do I change what Mycroft responds to?
 
-Visit (Home)[https://home.mycroft.ai], log in to your account, and go to the Settings page.  Under the Advanced settings you will find the **Listener** section.  In that section is a field labeled **Phonemes**.
+Visit [Home](https://home.mycroft.ai), log in to your account, and go to the **Settings** page.  Under the Advanced settings you will find the **Listener** section.  In that section is a field labeled **Phonemes**.
 
 Phonemes are basic units of sound, and the value in this field is the wake word Mycroft listens for all the time.  The default value is `HH EY . M AY K R AO F T`, which is how you spell "Hey Mycroft" phonetically.  To figure out the phonetic spelling of a different phrase, you can search for your word or similar ones using this [online CMU Sphinx English dictionary][cmudict]. If there is a space in the phrase place a period between the words in the phonemes, as demonstrated between "EY" and "M" in the default wake word.
 
