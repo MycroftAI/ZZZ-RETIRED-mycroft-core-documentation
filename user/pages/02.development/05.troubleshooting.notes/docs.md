@@ -8,16 +8,9 @@ taxonomy:
 
 ### How do I change what Mycroft responds to?
 
-To begin, open up your config file or create one in the appropriate user directory (`~/.mycroft/mycroft.ini` is suggested). In there add a new block of config shown below, provided that it doesn't already exist:
+Visit (Home)[https://home.mycroft.ai], log in to your account, and go to the Settings page.  Under the Advanced settings you will find the **Listener** section.  In that section is a field labeled **Phonemes**.
 
-```ini
-[listener]
-wake_word = "hey mycroft"
-phonemes = "HH EY . M AY K R AO F T"
-threshold = "1e-90"
-```
-
-As you may guess, you can replace the "hey mycroft" above with whatever wake word you would like. Along with that you must change the "phonemes" (aka the pronunciation) to this new wake word. To do this you can search for your word or similar ones using [this cmu sphinx English dictionary][cmudict]. If there is a space in the phrase place a period between the words in the phonemes, as demonstrated above.
+Phonemes are basic units of sound, and the value in this field is the wake word Mycroft listens for all the time.  The default value is `HH EY . M AY K R AO F T`, which is how you spell "Hey Mycroft" phonetically.  To figure out the phonetic spelling of a different phrase, you can search for your word or similar ones using this [online CMU Sphinx English dictionary][cmudict]. If there is a space in the phrase place a period between the words in the phonemes, as demonstrated between "EY" and "M" in the default wake word.
 
 The last thing to do is to test it out and adjust the threshold value. Decreasing this value (ie. from `1e-90` to `1e-100`) will increase the sensitivity. Going in the opposite direction will make it harder to trigger yet reduce the number of false positives. You will find that this value normally has to be changed a fair amount for every wake word as some require values as high as `1e-10` whereas others need values such as `1e-120` to work.
 
