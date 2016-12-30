@@ -16,6 +16,22 @@ The last thing to do is to test it out and adjust the threshold value. Decreasin
 
 [cmudict]:http://www.speech.cs.cmu.edu/cgi-bin/cmudict
 
+##### The hard way (editing mycroft.conf file)
+
+The same can also be achieved via settings in a conf file.  Edit or create the file in the appropriate user directory (`/home/mycroft/.mycroft/mycroft.conf` or `~/.mycroft/mycroft.conf`). In this file add or modify the config block as shown below:
+ 
+ ```json
+ "listener": {
+     "sample_rate": 16000,
+     "channels": 1,
+     "wake_word": "hey mycroft",
+     "phonemes": "HH EY . M AY K R AO F T",
+     "threshold": 1e-90,
+     "multiplier": 1.0,
+     "energy_ratio": 1.5
+   }
+```
+
 ## Common errors
 As errors arise they will be added to the sub-sections below. This will be a good place to start if you encounter a problem when installing and running mycroft-core prior to reaching out to the forum or Slack channels. 
 
