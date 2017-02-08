@@ -7,6 +7,18 @@ taxonomy:
 [github-releases]:https://github.com/MycroftAI/mycroft-core/releases
 [View the releases on GitHub here.][github-releases]
 
+# v0.8.2
+This release enables our new and enhanced location configuration services at https://home.mycroft.ai.  Users can set default locations for their account and for individual devices.  This provides rich location information for Skills running on the Mycroft device, including governmental entity names (city, state, providence, country), GPS coordinates and timezone information.
+
+# General enhancements
+* Location integration (#487)
+* BUGFIX:  Authorization token was not updated after expiration (#452)
+* BUGFIX:  Speech To Text config initialization (#484)
+* BUGFIX:  Shutdown all skills on process termination (#479)
+
+# Developer tools
+* BUGFIX:  dev_setup.sh ignored WORKON_HOME when VIRTUALENV_ROOT was unset (#372)
+
 # v0.8.1
 ### General enhancements
 - Changed network timeout to improve disconnected behavior (#461).  This is most important when first bringing up a unit which has no network connection configured yet.
