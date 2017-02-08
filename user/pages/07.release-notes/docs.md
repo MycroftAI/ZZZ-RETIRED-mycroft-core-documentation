@@ -7,6 +7,25 @@ taxonomy:
 [github-releases]:https://github.com/MycroftAI/mycroft-core/releases
 [View the releases on GitHub here.][github-releases]
 
+# v0.8.3
+# For the Weather Skill:
+When talking about the current city, the city name is generally not spoken (more natural)
+A "pretty" name of just the city is used instead of the complete name
+Works around the recurring issue with OWM where they report bad min/max temps (same as the current temp)
+Changed "Location is not valid" to "I don't know that location" (people don't say "not valid")
+For the Time Skill:
+
+The timezone is extracted from the device location setting
+Time responses are more varied and shorter
+This change adds MycroftSkill.location_pretty and MycroftSkill.location_timezone properties.
+PR: https://github.com/MycroftAI/mycroft-core/pull/492
+
+# Cli improvements:
+"Input:" doesn't get intermingled with the output (usually -- long pauses can still cause it to happen)
+"Output:" is now displayed
+Ctrl+C is handled gracefully
+PR: https://github.com/MycroftAI/mycroft-core/pull/494
+
 # v0.8.2
 This release enables our new and enhanced location configuration services at https://home.mycroft.ai.  Users can set default locations for their account and for individual devices.  This provides rich location information for Skills running on the Mycroft device, including governmental entity names (city, state, providence, country), GPS coordinates and timezone information.
 
