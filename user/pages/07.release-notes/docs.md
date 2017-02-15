@@ -7,6 +7,23 @@ taxonomy:
 [github-releases]:https://github.com/MycroftAI/mycroft-core/releases
 [View the releases on GitHub here.][github-releases]
 
+# v0.8.4
+This release includes several enhancements as well as a bug fix for Picroft alsa playback issues.
+# For Pycroft:
+A configuration setting was added for playing wav files. We found that specifying a hardware device to aplay will fix a Raspberry Pi specific alsa issue.
+PR #514 https://github.com/MycroftAI/mycroft-core/pull/514
+# For Everyone:
+We added more verbose skill service logging, such as where skills are loaded from and what intents are registered.
+PR https://github.com/MycroftAI/mycroft-core/pull/513
+A wake word detected sound has been added for better interaction. This wav file is configurable as well for your own custom sound!
+PR #506 https://github.com/MycroftAI/mycroft-core/pull/506
+When pairing your device, sometimes the code sounded very un-clear, so we added the NATO phonetic spelling. An example would be "C as in Charlie"
+PR #502 https://github.com/MycroftAI/mycroft-core/pull/502
+Load data files for skills automatically when loading the skill.
+PR #499 https://github.com/MycroftAI/mycroft-core/pull/499
+The Adapt intent parser version used has been upgraded to 0.3.0
+PR #496 https://github.com/MycroftAI/mycroft-core/pull/497
+
 # v0.8.3
 # For the Weather Skill:
 When talking about the current city, the city name is generally not spoken (more natural)
