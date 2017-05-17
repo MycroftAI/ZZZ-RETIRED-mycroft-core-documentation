@@ -10,7 +10,7 @@ It is easy to develop skills for Mycroft. The most important part is to understa
 
 ## Setting up the folders
 
-Once you've come up with your idea for a skill, make a new folder in `mycroft-core/mycroft/skills` with the desired skill name. Please note that this folder name should be lower-case, and do not use the names of frequently used python modules such as `time` to avoid conflicts.
+Once you've come up with your idea for a skill, make a new folder in `opt/mycroft/skills` with the desired skill name. Please note that this folder name should be lower-case, and do not use the names of frequently used python modules such as `time` to avoid conflicts.
 
 For skills, there should generally be four things inside this folder - a folder called `dialog`, a file called `__init__.py`, a folder called `test`, and a folder called `vocab`. You can also optionally have a `regex` folder, used to define regex phrases for more flexible vocab. The folder structure should look like this:
 ```
@@ -34,7 +34,7 @@ The `dialog` folder contains subfolders for each spoken language the skill suppo
 ---my.file.2.dialog
 ```
 
-Take a look at the [Hello World Skill](https://github.com/MycroftAI/mycroft-core/tree/master/mycroft/skills/helloworld) as an example. Its `dialog` folder has an `en-us` subfolder in it, which corresponds to American English. Inside are three dialog files. As an example, look inside `welcome.dialog`. It looks like
+Take a look at the [Hello World Skill](https://github.com/MycroftAI/skill-hello-world) as an example. Its `dialog` folder has an `en-us` subfolder in it, which corresponds to American English. Inside are three dialog files. As an example, look inside `welcome.dialog`. It looks like
 ```
 Any time.
 Glad to be of service.
