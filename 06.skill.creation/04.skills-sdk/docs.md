@@ -9,7 +9,7 @@ taxonomy:
 A skill is a class that extends the [MycroftSkill](https://github.com/MycroftAI/mycroft-core/blob/master/mycroft/skills/core.py#L98) class. It is instantiated by the skills container via a [create_skill](https://github.com/MycroftAI/mycroft-core/blob/master/mycroft/skills/spelling/__init__.py#L33) method on the skill module. See Mycroft's [spelling skill](https://github.com/MycroftAI/mycroft-core/blob/master/mycroft/skills/spelling/__init__.py) for a simple example.
 
 ## Running your skill
-* Find the IP of your mycroft unit (have you tried asking mycroft what its IP address is?)
+* Find the IP of your mycroft unit (try asking mycroft what its IP address is)
 * Create a virtualenv and a clean directory for your skill.
   * install the skills SDK via the instructions [here](https://github.com/MycroftAI/mycroft-core/wiki/Mycroft-Skills-Framework#installing-the-skills-sdk)
 * Implement a skill. Try copying the spelling skill's __init__.py into your directory.

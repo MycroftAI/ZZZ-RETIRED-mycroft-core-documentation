@@ -55,8 +55,8 @@ def create_skill():
 ```
 Each of these functions does something different.
 
-#### __init__
-This is the constructor for the class, called when a new <skillname> object is created. In it you should call the constructor of the MycroftSkill class using `super` and initialize any member variable to the values you need.r
+#### \_\_init\_\_
+This is the constructor for the class, called when a new <skillname> object is created. In it you should call the constructor of the MycroftSkill class using `super` and initialize any member variable to the values you need.
 In the Hello World skill, this looks like
 ```python
 def __init__(self):
@@ -79,7 +79,7 @@ This creates an intent named thank_you_intent that requires a ThankYouKeyword, w
 It then registers that the function handle_thank_you_intent is what should be called if the ThankYouKeyword is found.
 All of the other intents are registered in the same way.
 
-#### handle_<intent_name>_intent
+#### handle_&lt;intent_name&gt;_intent
 This is where you tell Mycroft to actually do what you want him to do. This can range from something like a call to an API to opening an application. In the Hello World skill, each intent simply tells Mycroft to speak from the dialog file..
 ```python
 def handle_thank_you_intent(self, message):

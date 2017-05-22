@@ -7,7 +7,7 @@ taxonomy:
 
 ### Using Virtualenv and Python
 
-For now, this is mostly helfpul for developing skills for Mycroft and shouldn't be necessary unless you are using some custom skills. To activate your virtualenv.
+For now, this is mostly helpful for developing skills for Mycroft and shouldn't be necessary unless you are using some custom skills to activate your virtualenv.
 
 With virtualenv-wrapper:
 ```
