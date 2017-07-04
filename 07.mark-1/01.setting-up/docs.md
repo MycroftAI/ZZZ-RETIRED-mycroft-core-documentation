@@ -14,7 +14,6 @@ the Mark 1.
 It is a good idea to change the password.  By default the password for the mark 1 is `mycroft`.  In order to change this you would ssh to it or connect a hdmi cable to the port on the back of the Mark 1 unit.
 
 From the console/ssh session enter the following command:
-
 `passwd`
 
 It will prompt you for the current password, then new password twice, and then the new password will be saved.
@@ -42,7 +41,6 @@ All of these log file locations you can view by running:
 `cat logfile | more` Use Spacebar to step through the results, q will quit the file.
 
 You can also live view the log by tailing it with:
-
 `tail -f logfile` This will live tail the log and anytime something is written you will see it
 `cntrl + c` will stop it.
 
