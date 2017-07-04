@@ -31,5 +31,28 @@ passwd: password updated successfully
 # Setup ssh keys
 
 # Checking for installed skills
+From the ssh/console session run the following command to see a list of installed skills, hit spacebar to scroll through:
+
+`msm list | sort | more`
 
 # Log File Locations
+All mark 1 logs are located in `/var/log/mycroft-` then different names for different logfiles.
+
+All of these log file locations you can view by running:
+`cat logfile | more` Use Spacebar to step through the results, q will quit the file.
+
+You can also live view the log by tailing it with:
+
+`tail -f logfile` This will live tail the log and anytime something is written you will see it
+`cntrl + c` will stop it.
+
+
+## Skill Log
+The skill log which includes information about skills loading, api calls for updates/configuration changes can be found at:
+
+`/var/log/mycroft-skills`
+
+## Speech Log
+This contains log information about words being spoke, wake words heard, etc.
+
+`/var/log/mycroft-speech-client.log`
