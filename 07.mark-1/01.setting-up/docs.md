@@ -26,8 +26,6 @@ Retype new UNIX password:
 passwd: password updated successfully
 ```
 
-# Setup ssh keys
-
 # Checking for installed skills
 From the ssh/console session run the following command to see a list of installed skills, hit spacebar to scroll through:
 
