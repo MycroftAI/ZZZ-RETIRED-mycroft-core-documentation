@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-[plugin:youtube](https://www.youtube.com/watch?v=g1G0yEKuED8)
+[plugin:youtube](https://youtu.be/Xz3dAAQdqIc)
 
 Mycroft Mark 1 at your service. I’m a little table robot hoping to become your first robot buddy. I’m ready to help you out with anything I can.  I may be young, but I’m also full of ambition. Since I’m always connected to internet, I’m learning new things virtually every week.
 
@@ -28,3 +28,6 @@ Mark 1 Specs:
 - enclosure with side-mount ports
 - 12 Volt power adapter.
 - NOTE: The 40-pin connector has a different pinout than a Raspberry Pi. The Pi's built-in Bluetooth is also disabled.
+
+### Latest Mark 1 Image
+The most recent image can always be found [here](https://mycroft.ai/to/mark-1-image/)
