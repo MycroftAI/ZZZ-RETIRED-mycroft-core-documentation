@@ -1,5 +1,5 @@
 ---
-title: 'What is Mark 1'
+title: 'What is Mark 1 (Mycroft Kickstarter)'
 taxonomy:
     category:
         - docs
@@ -27,4 +27,4 @@ Mark 1 Specs:
 - integrated Arduino Mini
 - enclosure with side-mount ports
 - 12 Volt power adapter.
-NOTE: The 40-pin connector has a different pinout than a Raspberry Pi. The Pi's built-in Bluetooth is also disabled.
+- NOTE: The 40-pin connector has a different pinout than a Raspberry Pi. The Pi's built-in Bluetooth is also disabled.
