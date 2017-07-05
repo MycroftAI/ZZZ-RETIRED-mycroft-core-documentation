@@ -34,3 +34,19 @@ Currently the below skills are available out of the box, you can find more skill
 - Play the news.
 - [Start | stop | play] recording.
 - Tell me a joke!
+
+# Accessing Mark 1 Menu
+Below are the steps to access the menu on the Mark 1 device.  This will let you enable ssh, manually reboot, etc.
+
+1. Hold down the mark 1 button for two seconds to get to the menu.
+2. You can toggle between the below options by rotating the button then pushing in on the button once you find your selection.
+
+You can pick from these options on the screen menu:
+- ILLUM - change the brightness of the eyes
+- WIFI - setup or change wifi
+- REBOOT - restart the mark 1
+- OFF - turn off the mark 1
+- TEST - test my lights, speaker, and mic
+- SSH - enable/disable ssh option.
+- RESET - wipe the data on the mark 1 and reset to factory default
+- EXIT - leave the menu
