@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-# Supported Command List
+# Voice Command List
 Currently the below skills are available out of the box, you can find more skills at the
 [Mycroft Skill Repo](https://github.com/MycroftAI/mycroft-skills)
 
