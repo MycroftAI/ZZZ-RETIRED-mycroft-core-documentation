@@ -7,8 +7,7 @@ taxonomy:
 
 # Setup Instructions
 
-There is a overall setup pdf located [here](https://mycroft.ai/wp-content/uploads/2017/06/Mark_1_User_Guide.pdf) with instructions on setting up
-the Mark 1.
+There is a overall setup pdf located [here](https://mycroft.ai/to/user-guide/) with instructions on setting up the Mark 1.
 
 # Changing Password
 It is a good idea to change the password.  By default the user is `pi` and the password is `mycroft` for the mark 1.  In order to change this you would ssh to it or connect a hdmi cable to the port on the back of the Mark 1 unit.
