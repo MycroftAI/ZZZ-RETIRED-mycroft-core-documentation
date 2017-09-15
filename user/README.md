@@ -1,1 +1,0 @@
-### Docs for webpage shown on https://docs.mycroft.ai

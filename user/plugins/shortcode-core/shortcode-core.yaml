@@ -1,6 +1,0 @@
-enabled: true
-active: true
-active_admin: true
-parser: wordpress
-load_fontawesome: false
-
